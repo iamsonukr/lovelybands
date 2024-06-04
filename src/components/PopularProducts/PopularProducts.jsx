@@ -78,7 +78,7 @@ const PopularProducts = () => {
           <div className="product-card" key={index}>
             <img src={product.image} alt={product.name} />
             <div className="productDetails">
-              <h3 style={{padding:"1px"}}>{product.name}</h3>
+              <h3 >{product.name}</h3>
               <p className="product-price">{product.price}</p>
 
             </div>

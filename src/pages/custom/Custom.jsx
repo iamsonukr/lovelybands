@@ -31,7 +31,7 @@ const Custom = () => {
       <div className="formOptions">
         <div className="display">
           <WristbandPreview selectedWristband={selectedWristband} />
-        </div>
+          </div>
         <div className='formItems'>
           {/* Type */}
           <div className="SelectType">
@@ -67,7 +67,7 @@ const Custom = () => {
               </div>
               <div className="landW1">
                 <p>7/8 inch <span className='SUnit'>11 mm</span></p>
-                <input type="radio" name="width" className="radio-input"/>
+                <input type="radio" name="width" className="radio-input" />
               </div>
             </div>
 
@@ -76,11 +76,11 @@ const Custom = () => {
             <div className="lanLenght">
               <div className="landL1">
                 <p>Small <span className='SUnit'>30 inch</span></p>
-                <input type="radio" name="length" className="radio-input"/>
+                <input type="radio" name="length" className="radio-input" />
               </div>
               <div className="landL1">
                 <p>Standard <span className='SUnit'>36 inch</span></p>
-                <input type="radio" name="length" className="radio-input"/>
+                <input type="radio" name="length" className="radio-input" />
               </div>
               <div className="landL1">
                 <p>Large <span className='SUnit'>42 inch</span></p>
@@ -88,7 +88,7 @@ const Custom = () => {
               </div>
               <div className="landL1">
                 <p>Extra Large <span className='SUnit'>48 inch</span></p>
-                <input type="radio" name="length" className="radio-input"/>
+                <input type="radio" name="length" className="radio-input" />
               </div>
             </div>
           </div>

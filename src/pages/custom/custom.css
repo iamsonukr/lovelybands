@@ -7,10 +7,15 @@
 }
 .display{
     margin-top:10px ;
-    margin-left: -70px;
+    margin-left: -90px;
     display: block;
     position: initial;
-    /* border: 2px solid red; */
+    border: 2px solid gray;
+}
+.productDetails{
+  width: 400px;
+  background-color: #fff;
+  color: #4d4d4d;
 }
 .display img{
     width: 600px;
