@@ -10,14 +10,16 @@ import { BrowserRouter, Routes,Route } from "react-router-dom"
 function App() {
   return (
     <>
-    <Navbar/>
       <BrowserRouter>
+    <Navbar/>
+      
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/custom-lanyard" element={<Custom />} />
         </Routes>
-      </BrowserRouter>
+      
       <Footer/>
+        </BrowserRouter>
     </>
   )
 }
