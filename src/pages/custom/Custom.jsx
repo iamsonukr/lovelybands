@@ -4,7 +4,10 @@ import './custom.css'
 const Custom = () => {
   const [selectedWristband, setSelectedWristband] = useState({ id: 1, image: './lanyard/lanyard1.webp' });
 
+  const [name,setName]=useState('Your Name');
+
   const Custom = [
+    { id: 0, image: './lanyard/lanyard0.png' },
     { id: 1, image: './lanyard/lanyard1.webp' },
     { id: 2, image: './lanyard/lanyard2.webp' },
     { id: 3, image: './lanyard/lanyard3.webp' },
@@ -30,7 +33,7 @@ const Custom = () => {
       {/* <h2>Choose a Wristband Style</h2> */}
       <div className="formOptions">
         <div className="display">
-          <WristbandPreview selectedWristband={selectedWristband} />
+          <WristbandPreview selectedWristband={selectedWristband} name={name}/>
           </div>
         <div className='formItems'>
           {/* Type */}
@@ -48,84 +51,14 @@ const Custom = () => {
               ))}
             </div>
           </div>
-          {/* select Size */}
-          <div className="lanSize">
-            <p className='FormHeadTitle'>2. Please Select the size you want</p>
-            <p><pre>Width</pre></p>
-            <div className="lanWidth">
-              <div className="landW1">
-                <p>1 inch <span className='SUnit'>25 mm</span></p>
-                <input type="radio" name="width" className="radio-input" />
-              </div>
-              <div className="landW1">
-                <p>3/4 inch <span className='SUnit'>20 mm</span></p>
-                <input type="radio" name="width" className="radio-input" />
-              </div>
-              <div className="landW1">
-                <p>5/8 inch <span className='SUnit'>15 mm</span></p>
-                <input type="radio" name="width" className="radio-input" />
-              </div>
-              <div className="landW1">
-                <p>7/8 inch <span className='SUnit'>11 mm</span></p>
-                <input type="radio" name="width" className="radio-input" />
-              </div>
-            </div>
 
-            {/* Lenght */}
-            <p>Length</p>
-            <div className="lanLenght">
-              <div className="landL1">
-                <p>Small <span className='SUnit'>30 inch</span></p>
-                <input type="radio" name="length" className="radio-input" />
-              </div>
-              <div className="landL1">
-                <p>Standard <span className='SUnit'>36 inch</span></p>
-                <input type="radio" name="length" className="radio-input" />
-              </div>
-              <div className="landL1">
-                <p>Large <span className='SUnit'>42 inch</span></p>
-                <input type="radio" name="length" className="radio-input" />
-              </div>
-              <div className="landL1">
-                <p>Extra Large <span className='SUnit'>48 inch</span></p>
-                <input type="radio" name="length" className="radio-input" />
-              </div>
-            </div>
-          </div>
-          {/* size end here */}
-
-          {/* Choose color */}
-          <p className='FormHeadTitle'>3. Please select the color you want</p>
-          <div className='color'>
-            <div className="color1">
-              <div className="gold"></div>
-              <input type="text" placeholder='quantity' />
-
-            </div>
-            <div className="color1">
-              <div className="black"></div>
-              <input type="text" placeholder='quantity' />
-
-            </div>
-            <div className="color1">
-              <div className="brown"></div>
-              <input type="text" placeholder='quantity' />
-
-            </div>
-            <div className="color1">
-              <div className="pink"></div>
-              <input type="text" placeholder='quantity' />
-
-            </div>
-
-          </div>
-          <p className='FormHeadTitle'>4. Customize your message</p>
+          <p className='FormHeadTitle'>2. Customize your message</p>
           <div className="custom-message">
             {/* msg line one */}
             <div className="message-row">
               <div className="msg">
                 <p>Your Message Here</p>
-                <input type="text" className="msgBox" />
+                <input type="text" className="msgBox" onChange={(e)=>setName(e.target.value)} />
               </div>
               <div className="select-font">
                 <p>Choose your font .</p>
@@ -197,6 +130,82 @@ const Custom = () => {
             </div>
 
           </div>
+        
+
+          {/* Choose color */}
+          <p className='FormHeadTitle'>3. Please select the color you want</p>
+          <div className='color'>
+            <div className="color1">
+              <div className="gold"></div>
+              <input type="text" placeholder='quantity' />
+
+            </div>
+            <div className="color1">
+              <div className="black"></div>
+              <input type="text" placeholder='quantity' />
+
+            </div>
+            <div className="color1">
+              <div className="brown"></div>
+              <input type="text" placeholder='quantity' />
+
+            </div>
+            <div className="color1">
+              <div className="pink"></div>
+              <input type="text" placeholder='quantity' />
+
+            </div>
+
+          </div>
+
+          
+
+            {/* select Size */}
+            <div className="lanSize">
+            <p className='FormHeadTitle'>4. Please Select the size you want</p>
+            <p><pre>Width</pre></p>
+            <div className="lanWidth">
+              <div className="landW1">
+                <p>1 inch <span className='SUnit'>25 mm</span></p>
+                <input type="radio" name="width" className="radio-input" />
+              </div>
+              <div className="landW1">
+                <p>3/4 inch <span className='SUnit'>20 mm</span></p>
+                <input type="radio" name="width" className="radio-input" />
+              </div>
+              <div className="landW1">
+                <p>5/8 inch <span className='SUnit'>15 mm</span></p>
+                <input type="radio" name="width" className="radio-input" />
+              </div>
+              <div className="landW1">
+                <p>7/8 inch <span className='SUnit'>11 mm</span></p>
+                <input type="radio" name="width" className="radio-input" />
+              </div>
+            </div>
+
+            {/* Lenght */}
+            <p>Length</p>
+            <div className="lanLenght">
+              <div className="landL1">
+                <p>Small <span className='SUnit'>30 inch</span></p>
+                <input type="radio" name="length" className="radio-input" />
+              </div>
+              <div className="landL1">
+                <p>Standard <span className='SUnit'>36 inch</span></p>
+                <input type="radio" name="length" className="radio-input" />
+              </div>
+              <div className="landL1">
+                <p>Large <span className='SUnit'>42 inch</span></p>
+                <input type="radio" name="length" className="radio-input" />
+              </div>
+              <div className="landL1">
+                <p>Extra Large <span className='SUnit'>48 inch</span></p>
+                <input type="radio" name="length" className="radio-input" />
+              </div>
+            </div>
+          </div>
+          {/* size end here */}
+         
           {/* Attachment Style */}
           <p className='FormHeadTitle'>5. Please select the Attachment you want</p>
           <div className='color'>
@@ -231,14 +240,19 @@ const Custom = () => {
 };
 
 // WristbandPreview.js
-const WristbandPreview = ({ selectedWristband }) => {
+const WristbandPreview = ({ selectedWristband,name }) => {
   return (
     <div>
       {/* <h2>Preview</h2> */}
-      {selectedWristband ? (
+      {selectedWristband.id==0 ? (
+        <>
         <img src={selectedWristband.image} alt="Selected Wristband" />
+        <p className='name1'>{name}</p>
+        <p className='name2'>{name}</p>
+        <p className='name3'>{name}</p>
+        </>
       ) : (
-        <p>No wristband selected</p>
+        <img src={selectedWristband.image} alt="Selected Wristband" />
       )}
     </div>
   );

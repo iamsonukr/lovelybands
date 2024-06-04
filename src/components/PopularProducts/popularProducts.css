@@ -28,7 +28,7 @@
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  width: 200px;
+  /* width: 200px; */
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -57,8 +57,9 @@
 }
 
 .productDetails{
+  width: 200px;
   cursor: pointer;
-  color: #f3f3f3;
-  background-color: #000046;
+  /* color: #f3f3f3; */
+  background-color: #000046 !important;
   padding: 10px 1px;
 }
