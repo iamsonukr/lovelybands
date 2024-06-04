@@ -18,16 +18,17 @@ const Navbar = () => {
         </button>
       </div>
       <ul className="navbar-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <div className="navbar-user">
         <li>
           <Link to="/">Home</Link>
           </li>
         <li>
           <Link to="/custom-lanyard">Custom</Link>
           </li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div className="navbar-user">
+        
         <a href="#login">Login</a>
         <a href="#register">Register</a>
       </div>
