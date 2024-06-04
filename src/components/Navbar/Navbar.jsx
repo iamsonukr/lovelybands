@@ -1,5 +1,6 @@
 import React from 'react';
 import './navbar.css';
+import { Link } from 'react-router-dom';
 
 
 const Navbar = () => {
@@ -21,6 +22,12 @@ const Navbar = () => {
         <li><a href="#contact">Contact</a></li>
       </ul>
       <div className="navbar-user">
+        <li>
+          <Link to="/">Home</Link>
+          </li>
+        <li>
+          <Link to="/custom-lanyard">Custom</Link>
+          </li>
         <a href="#login">Login</a>
         <a href="#register">Register</a>
       </div>
