@@ -11,13 +11,12 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/custom-lanyard" element={<Custom />} />
         </Routes>
-        <Footer />
       </BrowserRouter>
+      <Footer/>
     </>
   )
 }
